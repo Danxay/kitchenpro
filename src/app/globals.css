@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #20df6c;
+  --color-background-light: #f6f8f7;
+  --color-background-dark: #112117;
+  --color-text-dark: #111714;
+  --color-text-secondary: #648772;
+  --color-border-light: #f0f4f2;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #1a2c23;
+
+  --font-display: var(--font-inter);
+  --font-sans: var(--font-inter);
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+}
+
+/* Custom utility for material symbols if needed, ensuring they render correctly */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
+
+.material-symbols-outlined.filled {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
