@@ -20,9 +20,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuiz }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link className="text-text-dark hover:text-primary transition-colors text-sm font-medium" href="#">Портфолио</Link>
+            <Link className="text-text-dark hover:text-primary transition-colors text-sm font-medium" href="/portfolio">Портфолио</Link>
             <Link className="text-text-dark hover:text-primary transition-colors text-sm font-medium" href="#">Материалы</Link>
-            <Link className="text-text-dark hover:text-primary transition-colors text-sm font-medium" href="#">Отзывы</Link>
+            <Link className="text-text-dark hover:text-primary transition-colors text-sm font-medium" href="/reviews">Отзывы</Link>
             <Link className="text-text-dark hover:text-primary transition-colors text-sm font-medium" href="#">О нас</Link>
           </nav>
 

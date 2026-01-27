@@ -96,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuiz }) => {
                 <span className="material-symbols-outlined !text-[16px] filled">star</span>
               </div>
             </div>
-            <p className="text-xs font-medium text-text-dark">"Отличное качество и быстрая установка. Рекомендую!"</p>
+            <p className="text-xs font-medium text-text-dark">&quot;Отличное качество и быстрая установка. Рекомендую!&quot;</p>
           </div>
         </div>
       </div>
