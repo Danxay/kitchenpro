@@ -7,7 +7,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 const projects = [
     {
         id: 1,
-        image: '/modern_white_kitchen_island_1769605750150.png',
+        image: '/modern_white_kitchen_island_1769605750150.webp',
         price: '485 000 ₽',
         duration: '14 дней',
         title: 'Современная белая кухня',
@@ -15,7 +15,7 @@ const projects = [
     },
     {
         id: 2,
-        image: '/loft_kitchen_dark_1769605279295.png',
+        image: '/loft_kitchen_dark_1769605279295.webp',
         price: '620 000 ₽',
         duration: '18 дней',
         title: 'Кухня с островом в стиле лофт',
@@ -23,7 +23,7 @@ const projects = [
     },
     {
         id: 3,
-        image: '/compact_corner_kitchen_1769605364732.png',
+        image: '/compact_corner_kitchen_1769605364732.webp',
         price: '380 000 ₽',
         duration: '12 дней',
         title: 'Уютная угловая кухня',

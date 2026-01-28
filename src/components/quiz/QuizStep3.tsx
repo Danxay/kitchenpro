@@ -39,7 +39,7 @@ export const QuizStep3: React.FC<QuizStep3Props> = ({ onSubmit, onBack }) => {
       <div className="relative w-full md:w-5/12 bg-gray-100 min-h-[200px] md:min-h-full shrink-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/stone_sink_luxury_gift_1769605810298.png')" }}
+          style={{ backgroundImage: "url('/stone_sink_luxury_gift_1769605810298.webp')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-8 text-white">
           <div>

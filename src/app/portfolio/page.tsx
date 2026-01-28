@@ -11,7 +11,7 @@ const QuizModal = dynamic(() => import('@/components/quiz/QuizModal').then((mod)
 const projects = [
   {
     id: 1,
-    image: '/modern_white_kitchen_island_1769605750150.png',
+    image: '/modern_white_kitchen_island_1769605750150.webp',
     price: '485 000 ₽',
     duration: '14 дней',
     area: '12 м²',
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     id: 2,
-    image: '/loft_kitchen_dark_1769605279295.png',
+    image: '/loft_kitchen_dark_1769605279295.webp',
     price: '620 000 ₽',
     duration: '18 дней',
     area: '18 м²',
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     id: 3,
-    image: '/compact_corner_kitchen_1769605364732.png',
+    image: '/compact_corner_kitchen_1769605364732.webp',
     price: '380 000 ₽',
     duration: '12 дней',
     area: '8 м²',
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     id: 4,
-    image: '/classic_beige_kitchen_1769605447061.png',
+    image: '/classic_beige_kitchen_1769605447061.webp',
     price: '750 000 ₽',
     duration: '21 день',
     area: '22 м²',
@@ -59,7 +59,7 @@ const projects = [
   },
   {
     id: 5,
-    image: '/linear_studio_kitchen_1769605522246.png',
+    image: '/linear_studio_kitchen_1769605522246.webp',
     price: '290 000 ₽',
     duration: '10 дней',
     area: '6 м²',
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     id: 6,
-    image: '/scandinavian_kitchen_light_1769605481983.png',
+    image: '/scandinavian_kitchen_light_1769605481983.webp',
     price: '520 000 ₽',
     duration: '16 дней',
     area: '15 м²',
@@ -134,8 +134,8 @@ export default function PortfolioPage() {
                     setVisibleCount(6);
                   }}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all cursor-pointer hover:scale-105 ${selectedStyle === style
-                      ? 'bg-primary text-text-dark shadow-md'
-                      : 'bg-gray-100 text-text-secondary hover:bg-gray-200'
+                    ? 'bg-primary text-text-dark shadow-md'
+                    : 'bg-gray-100 text-text-secondary hover:bg-gray-200'
                     }`}
                 >
                   {style}
