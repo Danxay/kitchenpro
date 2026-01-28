@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { QuizStep1 } from './QuizStep1';
 import { QuizStep2 } from './QuizStep2';
 import { QuizStep3 } from './QuizStep3';
@@ -18,6 +18,33 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose }) => {
         material: null as string | null,
         contact: null as { name: string; phone: string } | null,
     });
+    const modalRef = useRef<HTMLDivElement>(null);
+
+    const handleClose = useCallback(() => {
+        onClose();
+        // Сбрасываем после закрытия
+        setTimeout(() => {
+            setStep(1);
+            setAnswers({ shape: null, material: null, contact: null });
+        }, 300);
+    }, [onClose]);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                handleClose();
+            }
+        };
+
+        if (isOpen) {
+            window.addEventListener('keydown', handleKeyDown);
+            modalRef.current?.focus();
+        }
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isOpen, handleClose]);
 
     if (!isOpen) return null;
 
@@ -39,17 +66,12 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose }) => {
         setStep(4);
     };
 
-    const handleClose = () => {
-        onClose();
-        // Сбрасываем после закрытия
-        setTimeout(() => {
-            setStep(1);
-            setAnswers({ shape: null, material: null, contact: null });
-        }, 300);
-    };
-
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+            role="dialog"
+            aria-modal="true"
+        >
             {/* Backdrop */}
             <div
                 className="absolute inset-0 bg-black/60 backdrop-blur-sm"
@@ -57,10 +79,15 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose }) => {
             />
 
             {/* Modal Card */}
-            <div className="relative z-10 w-full max-w-[960px] bg-white rounded-2xl shadow-2xl overflow-hidden min-h-[500px] md:min-h-[600px] flex flex-col">
+            <div
+                ref={modalRef}
+                tabIndex={-1}
+                className="relative z-10 w-full max-w-[960px] bg-white rounded-2xl shadow-2xl overflow-hidden min-h-[500px] md:min-h-[600px] flex flex-col outline-none"
+            >
                 {/* Close Button */}
                 <button
                     onClick={handleClose}
+                    aria-label="Закрыть модальное окно"
                     className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors z-50 cursor-pointer bg-white/80 rounded-full"
                 >
                     <span className="material-symbols-outlined !text-[24px]">close</span>
