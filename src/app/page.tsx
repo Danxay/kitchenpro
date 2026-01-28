@@ -5,6 +5,10 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { Features } from '@/components/sections/Features';
+import { PortfolioPreview } from '@/components/sections/PortfolioPreview';
+import { Process } from '@/components/sections/Process';
+import { ReviewsPreview } from '@/components/sections/ReviewsPreview';
+import { Contacts } from '@/components/sections/Contacts';
 import { QuizModal } from '@/components/quiz/QuizModal';
 
 export default function Home() {
@@ -14,12 +18,16 @@ export default function Home() {
   const closeQuiz = () => setIsQuizOpen(false);
 
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark font-display text-text-dark antialiased">
+    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-white font-display text-text-dark antialiased">
       <Header onOpenQuiz={openQuiz} />
 
       <main className="flex-grow flex flex-col">
         <Hero onOpenQuiz={openQuiz} />
         <Features />
+        <PortfolioPreview />
+        <Process />
+        <ReviewsPreview />
+        <Contacts onOpenQuiz={openQuiz} />
       </main>
 
       <Footer />

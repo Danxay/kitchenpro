@@ -35,20 +35,20 @@ export const QuizStep1: React.FC<QuizStep1Props> = ({ selectedShape, onSelectSha
       {/* Progress Bar Section */}
       <div className="flex flex-col gap-3 mb-8">
         <div className="flex gap-6 justify-between items-end">
-          <p className="text-[#111714] dark:text-slate-200 text-sm font-medium leading-normal opacity-80">Вопрос 1 из 3</p>
+          <p className="text-text-dark text-sm font-medium leading-normal opacity-80">Вопрос 1 из 3</p>
           <p className="text-primary font-bold text-sm">33%</p>
         </div>
-        <div className="rounded-full bg-slate-200 dark:bg-slate-700 h-2 w-full overflow-hidden">
+        <div className="rounded-full bg-gray-200 h-2 w-full overflow-hidden">
           <div className="h-full rounded-full bg-primary transition-all duration-500 ease-out" style={{ width: '33%' }}></div>
         </div>
       </div>
 
       {/* Headline */}
       <div className="mb-8 text-center md:text-left">
-        <h2 className="text-[#111714] dark:text-white tracking-tight text-3xl md:text-4xl font-bold leading-tight">
+        <h2 className="text-text-dark tracking-tight text-3xl md:text-4xl font-bold leading-tight">
           Выберите форму кухни
         </h2>
-        <p className="mt-2 text-slate-500 dark:text-slate-400 text-base">
+        <p className="mt-2 text-text-secondary text-base">
           Мы подберем для вас идеальные варианты планировки
         </p>
       </div>
@@ -65,20 +65,20 @@ export const QuizStep1: React.FC<QuizStep1Props> = ({ selectedShape, onSelectSha
               checked={selectedShape === shape.id}
               onChange={() => onSelectShape(shape.id)}
             />
-            <div className={`flex flex-col h-full rounded-xl border-2 p-4 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 transition-all duration-200
+            <div className={`flex flex-col h-full rounded-xl border-2 p-4 shadow-sm ring-1 ring-gray-200 transition-all duration-200
               ${selectedShape === shape.id
-                ? 'border-primary bg-primary/5 dark:bg-primary/10 ring-0 shadow-md'
-                : 'border-transparent bg-white dark:bg-slate-800 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-slate-700/50'
+                ? 'border-primary bg-primary/5 ring-0 shadow-md'
+                : 'border-transparent bg-white hover:border-primary/50 hover:bg-gray-50'
               }`}
             >
-              <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-50 dark:bg-black/20">
+              <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-50">
                 <div
                   className={`absolute inset-0 bg-contain bg-center bg-no-repeat transition-all ${selectedShape === shape.id ? 'opacity-80' : 'opacity-60 grayscale group-hover:grayscale-0'}`}
                   style={{ backgroundImage: `url('${shape.image}')` }}
                 ></div>
               </div>
               <div className="mt-auto flex items-center justify-between">
-                <p className={`text-lg font-bold leading-normal ${selectedShape === shape.id ? 'text-[#111714] dark:text-white' : 'text-[#111714] dark:text-white font-medium'}`}>{shape.label}</p>
+                <p className={`text-lg font-bold leading-normal ${selectedShape === shape.id ? 'text-text-dark' : 'text-text-dark font-medium'}`}>{shape.label}</p>
                 <span className={`material-symbols-outlined text-primary text-2xl font-bold transition-opacity ${selectedShape === shape.id ? 'opacity-100' : 'opacity-0'}`}>check_circle</span>
               </div>
             </div>
@@ -87,11 +87,11 @@ export const QuizStep1: React.FC<QuizStep1Props> = ({ selectedShape, onSelectSha
       </div>
 
       {/* Footer / Navigation */}
-      <div className="flex items-center justify-end mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
+      <div className="flex items-center justify-end mt-auto pt-6 border-t border-gray-100">
         <button
           onClick={onNext}
           disabled={!selectedShape}
-          className="flex items-center justify-center rounded-lg bg-primary hover:bg-[#1bc660] disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors text-[#112117] text-base font-bold h-12 px-8 min-w-[140px] shadow-lg shadow-primary/20 disabled:shadow-none"
+          className="flex items-center justify-center rounded-lg bg-primary hover:bg-green-400 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors text-text-dark text-base font-bold h-12 px-8 min-w-[140px] shadow-lg shadow-primary/20 disabled:shadow-none cursor-pointer"
         >
           <span>Далее</span>
           <span className="material-symbols-outlined ml-2 text-xl">arrow_forward</span>

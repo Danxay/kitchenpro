@@ -33,20 +33,20 @@ export const QuizStep2: React.FC<QuizStep2Props> = ({ selectedMaterial, onSelect
     <div className="flex flex-col h-full">
       {/* Header Section: Progress & Title */}
       <div className="px-6 md:px-12 pt-8 pb-4 text-center">
-        <p className="text-gray-500 dark:text-gray-400 text-sm font-medium mb-4 uppercase tracking-wider">Рассчитайте стоимость вашей кухни</p>
+        <p className="text-text-secondary text-sm font-medium mb-4 uppercase tracking-wider">Рассчитайте стоимость вашей кухни</p>
         <div className="flex flex-col gap-3 mb-6 max-w-xl mx-auto w-full">
           <div className="flex gap-6 justify-between items-end">
-            <p className="text-[#111714] dark:text-white text-base font-semibold leading-normal">Шаг 2 из 3</p>
-            <p className="text-[#111714] dark:text-gray-300 text-sm font-normal leading-normal">66%</p>
+            <p className="text-text-dark text-base font-semibold leading-normal">Шаг 2 из 3</p>
+            <p className="text-text-dark text-sm font-normal leading-normal">66%</p>
           </div>
-          <div className="rounded-full bg-[#dce5df] dark:bg-gray-700 h-2 overflow-hidden">
+          <div className="rounded-full bg-gray-200 h-2 overflow-hidden">
             <div className="h-full rounded-full bg-primary transition-all duration-500 ease-out" style={{ width: '66%' }}></div>
           </div>
         </div>
-        <h2 className="text-[#111714] dark:text-white tracking-tight text-[28px] md:text-[32px] font-bold leading-tight pt-2">
+        <h2 className="text-text-dark tracking-tight text-[28px] md:text-[32px] font-bold leading-tight pt-2">
           Материал фасадов
         </h2>
-        <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm">Выберите материал, который вам больше всего нравится</p>
+        <p className="text-text-secondary mt-2 text-sm">Выберите материал, который вам больше всего нравится</p>
       </div>
 
       {/* Options Grid */}
@@ -62,10 +62,10 @@ export const QuizStep2: React.FC<QuizStep2Props> = ({ selectedMaterial, onSelect
                 checked={selectedMaterial === item.id}
                 onChange={() => onSelectMaterial(item.id)}
               />
-              <div className={`flex flex-col h-full rounded-xl border-2 p-4 transition-all hover:bg-gray-100 dark:hover:bg-white/10
+              <div className={`flex flex-col h-full rounded-xl border-2 p-4 transition-all hover:bg-gray-100
                 ${selectedMaterial === item.id
-                  ? 'border-primary bg-primary/5 dark:bg-primary/10 shadow-sm'
-                  : 'border-transparent bg-gray-50 dark:bg-white/5'
+                  ? 'border-primary bg-primary/5 shadow-sm'
+                  : 'border-transparent bg-gray-50'
                 }`}
               >
                 <div className="w-full aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden mb-4 relative">
@@ -73,18 +73,18 @@ export const QuizStep2: React.FC<QuizStep2Props> = ({ selectedMaterial, onSelect
                     className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                     style={{ backgroundImage: `url("${item.image}")` }}
                   ></div>
-                  <div className={`absolute top-3 right-3 w-6 h-6 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center transition-opacity shadow-sm ${selectedMaterial === item.id ? 'opacity-100' : 'opacity-0'}`}>
+                  <div className={`absolute top-3 right-3 w-6 h-6 rounded-full bg-white flex items-center justify-center transition-opacity shadow-sm ${selectedMaterial === item.id ? 'opacity-100' : 'opacity-0'}`}>
                     <span className="material-symbols-outlined text-primary !text-[20px]">check_circle</span>
                   </div>
                 </div>
                 <div className="flex flex-col gap-1">
                   <div className="flex justify-between items-center">
-                    <p className="text-[#111714] dark:text-white text-lg font-bold leading-normal">{item.label}</p>
-                    <div className={`w-5 h-5 rounded-full border-2 transition-colors flex items-center justify-center ${selectedMaterial === item.id ? 'border-primary bg-primary' : 'border-gray-300 dark:border-gray-500 group-hover:border-primary/50'}`}>
+                    <p className="text-text-dark text-lg font-bold leading-normal">{item.label}</p>
+                    <div className={`w-5 h-5 rounded-full border-2 transition-colors flex items-center justify-center ${selectedMaterial === item.id ? 'border-primary bg-primary' : 'border-gray-300 group-hover:border-primary/50'}`}>
                       <div className={`w-2 h-2 rounded-full bg-white ${selectedMaterial === item.id ? 'opacity-100' : 'opacity-0'}`}></div>
                     </div>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">{item.description}</p>
+                  <p className="text-text-secondary text-sm font-normal leading-normal">{item.description}</p>
                 </div>
               </div>
             </label>
@@ -93,11 +93,11 @@ export const QuizStep2: React.FC<QuizStep2Props> = ({ selectedMaterial, onSelect
       </div>
 
       {/* Footer: Navigation Buttons */}
-      <div className="px-6 md:px-12 py-8 border-t border-gray-100 dark:border-gray-800 mt-auto">
+      <div className="px-6 md:px-12 py-8 border-t border-gray-100 mt-auto">
         <div className="flex flex-col-reverse sm:flex-row justify-between gap-4 max-w-4xl mx-auto items-center">
           <button
             onClick={onBack}
-            className="w-full sm:w-auto min-w-[120px] flex items-center justify-center gap-2 rounded-lg h-12 px-6 bg-transparent hover:bg-gray-100 dark:hover:bg-white/5 border border-gray-300 dark:border-gray-600 text-[#111714] dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em] transition-colors cursor-pointer"
+            className="w-full sm:w-auto min-w-[120px] flex items-center justify-center gap-2 rounded-lg h-12 px-6 bg-transparent hover:bg-gray-100 border border-gray-300 text-text-dark text-sm font-bold leading-normal tracking-[0.015em] transition-colors cursor-pointer"
           >
             <span className="material-symbols-outlined !text-[18px]">arrow_back</span>
             <span>Назад</span>
@@ -105,7 +105,7 @@ export const QuizStep2: React.FC<QuizStep2Props> = ({ selectedMaterial, onSelect
           <button
             onClick={onNext}
             disabled={!selectedMaterial}
-            className="w-full sm:w-auto min-w-[140px] flex items-center justify-center gap-2 rounded-lg h-12 px-8 bg-primary hover:bg-[#1bc760] disabled:bg-gray-300 disabled:cursor-not-allowed text-[#111714] text-sm font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 transition-all transform hover:translate-y-[-1px] disabled:shadow-none disabled:transform-none cursor-pointer"
+            className="w-full sm:w-auto min-w-[140px] flex items-center justify-center gap-2 rounded-lg h-12 px-8 bg-primary hover:bg-green-400 disabled:bg-gray-300 disabled:cursor-not-allowed text-text-dark text-sm font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 transition-all transform hover:translate-y-[-1px] disabled:shadow-none disabled:transform-none cursor-pointer"
           >
             <span>Далее</span>
             <span className="material-symbols-outlined !text-[18px]">arrow_forward</span>

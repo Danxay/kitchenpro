@@ -2,16 +2,12 @@ import React from 'react';
 
 export const Features: React.FC = () => {
   return (
-    <section className="bg-gray-50 py-16 sm:py-24">
+    <section className="bg-white py-16 sm:py-24">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           <div className="lg:w-1/3 space-y-4">
             <h2 className="text-3xl font-black text-text-dark tracking-tight">Почему выбирают нас?</h2>
             <p className="text-text-secondary text-lg">Мы объединяем современные технологии производства с мастерством, чтобы создавать премиальные кухни по заводским ценам.</p>
-            <a className="inline-flex items-center text-primary font-bold hover:underline gap-1 mt-2" href="#">
-              Узнать больше о процессе
-              <span className="material-symbols-outlined !text-[18px]">arrow_right_alt</span>
-            </a>
           </div>
           <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature 1 */}

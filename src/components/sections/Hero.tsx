@@ -31,10 +31,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuiz }) => {
               <span>Рассчитать стоимость</span>
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform !text-[20px]">arrow_forward</span>
             </button>
-            <button className="bg-white border border-border-light hover:bg-gray-50 text-text-dark h-14 px-8 rounded-lg text-base font-medium transition-colors w-full sm:w-auto flex items-center justify-center gap-2 cursor-pointer">
-              <span className="material-symbols-outlined !text-[24px]">download</span>
-              <span>Скачать каталог</span>
-            </button>
           </div>
           <p className="text-sm text-gray-400 flex items-center gap-2">
             <span className="material-symbols-outlined !text-[16px]">card_giftcard</span>
@@ -84,8 +80,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuiz }) => {
           <div className="absolute bottom-6 left-6 right-6 sm:right-auto bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/20 max-w-xs">
             <div className="flex items-center gap-3 mb-2">
               <div className="flex -space-x-2">
-                <img alt="Reviewer" className="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcLqh4Pg28KA1ZyzWGj1mgRgDwShZhKi_cegc9csGOeUFmZRBLkkre8kp7zzwUiim2zPUlH22djs1YAaD_TBi1bvkynDONq7L6WTh3D-v4OLW8aZpbG5an7kgohy8tFlQESmHFBHfnfB4ZuzFGwjTRAdxvbhsocm-Rzwp4e1Qxpv9PvXMd3xjSRTL8gMwFiCGlAYoAjepPDRD7EA4YPvTE697raSJ2J7Po8RvNiZkz8NTLV89ZeY7Mtxr38ZUI03BHFMNOHuPgjRA"/>
-                <img alt="Reviewer" className="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkoot5NKZUtng2ZFhA2oCDWqYmcrJfX8qQHHWR-FGfNu65gjbqsqxGlYVK08Z7vz5-1uCUxfvd_s2KUF4kkRzBNISsA86CnAf6jkH7IGM8PUC3bfxv4qJwZpDca_OJ5YiH4mzWI0ANcNzNcjjOHklmQMKaztjXnr1nb9wUDndVUiF4GFhCFOiXZ1Qe2CS5hKlY0hQOcgDmfPwZg0CANHMXk3LARuYjMsx-gQKb6vqFGZ2rVxevCHF1fC0Bn_hvw6QKDrVhG-bn78M"/>
+                <img alt="Reviewer" className="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcLqh4Pg28KA1ZyzWGj1mgRgDwShZhKi_cegc9csGOeUFmZRBLkkre8kp7zzwUiim2zPUlH22djs1YAaD_TBi1bvkynDONq7L6WTh3D-v4OLW8aZpbG5an7kgohy8tFlQESmHFBHfnfB4ZuzFGwjTRAdxvbhsocm-Rzwp4e1Qxpv9PvXMd3xjSRTL8gMwFiCGlAYoAjepPDRD7EA4YPvTE697raSJ2J7Po8RvNiZkz8NTLV89ZeY7Mtxr38ZUI03BHFMNOHuPgjRA" />
+                <img alt="Reviewer" className="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkoot5NKZUtng2ZFhA2oCDWqYmcrJfX8qQHHWR-FGfNu65gjbqsqxGlYVK08Z7vz5-1uCUxfvd_s2KUF4kkRzBNISsA86CnAf6jkH7IGM8PUC3bfxv4qJwZpDca_OJ5YiH4mzWI0ANcNzNcjjOHklmQMKaztjXnr1nb9wUDndVUiF4GFhCFOiXZ1Qe2CS5hKlY0hQOcgDmfPwZg0CANHMXk3LARuYjMsx-gQKb6vqFGZ2rVxevCHF1fC0Bn_hvw6QKDrVhG-bn78M" />
                 <div className="w-8 h-8 rounded-full border-2 border-white bg-text-dark text-white flex items-center justify-center text-xs font-bold">+2k</div>
               </div>
               <div className="flex text-yellow-400">

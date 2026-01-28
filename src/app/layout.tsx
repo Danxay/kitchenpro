@@ -4,13 +4,14 @@ import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin", "cyrillic"], // Added cyrillic for Russian support
+  subsets: ["latin", "cyrillic"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Kitchen Factory - Кухни на заказ",
-  description: "Кухни по вашим размерам за 14 дней. Без посредников.",
+  description: "Кухни по вашим размерам за 14 дней. Без посредников. Экономия до 30%.",
+  keywords: "кухни на заказ, кухни москва, производство кухонь, кухни под ключ",
 };
 
 export default function RootLayout({
@@ -26,7 +27,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-background-light dark:bg-background-dark font-sans text-text-dark antialiased">
+      <body className="bg-white font-sans text-text-dark antialiased">
         {children}
       </body>
     </html>
