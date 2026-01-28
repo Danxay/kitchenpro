@@ -8,11 +8,29 @@ interface QuizStep3Props {
 export const QuizStep3: React.FC<QuizStep3Props> = ({ onSubmit, onBack }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [errors, setErrors] = useState<{ name?: string; phone?: string }>({});
+
+  const validate = () => {
+    const newErrors: { name?: string; phone?: string } = {};
+
+    if (name.trim().length < 2) {
+      newErrors.name = 'Имя должно содержать минимум 2 символа';
+    }
+
+    // Russian phone format validation (loose)
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (phoneDigits.length < 10 || phoneDigits.length > 15) {
+      newErrors.phone = 'Введите корректный номер телефона (10-15 цифр)';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (name && phone) {
-      onSubmit({ name, phone });
+    if (validate()) {
+      onSubmit({ name: name.trim(), phone: phone.trim() });
     }
   };
 
@@ -74,13 +92,27 @@ export const QuizStep3: React.FC<QuizStep3Props> = ({ onSubmit, onBack }) => {
               <span className="material-symbols-outlined">person</span>
             </div>
             <input
-              className="block w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent focus:border-primary focus:bg-white focus:ring-0 rounded-xl text-text-dark placeholder-gray-400 font-medium transition-all outline-none"
+              className={`block w-full pl-12 pr-4 py-4 bg-gray-50 border focus:bg-white focus:ring-0 rounded-xl text-text-dark placeholder-gray-400 font-medium transition-all outline-none ${
+                errors.name
+                  ? 'border-red-500 focus:border-red-500'
+                  : 'border-transparent focus:border-primary'
+              }`}
               type="text"
               placeholder="Ваше имя"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {
+                setName(e.target.value);
+                if (errors.name) setErrors({ ...errors, name: undefined });
+              }}
               required
+              aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? 'name-error' : undefined}
             />
+            {errors.name && (
+              <p id="name-error" className="text-red-500 text-xs mt-1 ml-1">
+                {errors.name}
+              </p>
+            )}
           </div>
           {/* Phone Input */}
           <div className="relative group">
@@ -88,13 +120,27 @@ export const QuizStep3: React.FC<QuizStep3Props> = ({ onSubmit, onBack }) => {
               <span className="material-symbols-outlined">call</span>
             </div>
             <input
-              className="block w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent focus:border-primary focus:bg-white focus:ring-0 rounded-xl text-text-dark placeholder-gray-400 font-medium transition-all outline-none"
+              className={`block w-full pl-12 pr-4 py-4 bg-gray-50 border focus:bg-white focus:ring-0 rounded-xl text-text-dark placeholder-gray-400 font-medium transition-all outline-none ${
+                errors.phone
+                  ? 'border-red-500 focus:border-red-500'
+                  : 'border-transparent focus:border-primary'
+              }`}
               type="tel"
               placeholder="+7 (___) ___-__-__"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => {
+                setPhone(e.target.value);
+                if (errors.phone) setErrors({ ...errors, phone: undefined });
+              }}
               required
+              aria-invalid={!!errors.phone}
+              aria-describedby={errors.phone ? 'phone-error' : undefined}
             />
+            {errors.phone && (
+              <p id="phone-error" className="text-red-500 text-xs mt-1 ml-1">
+                {errors.phone}
+              </p>
+            )}
           </div>
 
           {/* Actions */}
