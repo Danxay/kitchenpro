@@ -9,7 +9,11 @@ import { PortfolioPreview } from '@/components/sections/PortfolioPreview';
 import { Process } from '@/components/sections/Process';
 import { ReviewsPreview } from '@/components/sections/ReviewsPreview';
 import { Contacts } from '@/components/sections/Contacts';
-import { QuizModal } from '@/components/quiz/QuizModal';
+import dynamic from 'next/dynamic';
+
+// ⚡ Bolt: Lazy load QuizModal to reduce initial bundle size.
+// It is only needed when user clicks "Calculate cost".
+const QuizModal = dynamic(() => import('@/components/quiz/QuizModal').then((mod) => mod.QuizModal));
 
 export default function Home() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
@@ -32,7 +36,7 @@ export default function Home() {
 
       <Footer />
 
-      <QuizModal isOpen={isQuizOpen} onClose={closeQuiz} />
+      {isQuizOpen && <QuizModal isOpen={isQuizOpen} onClose={closeQuiz} />}
     </div>
   );
 }
