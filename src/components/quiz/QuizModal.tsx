@@ -22,11 +22,6 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose }) => {
 
     const handleClose = useCallback(() => {
         onClose();
-        // Сбрасываем после закрытия
-        setTimeout(() => {
-            setStep(1);
-            setAnswers({ shape: null, material: null, contact: null });
-        }, 300);
     }, [onClose]);
 
     useEffect(() => {
