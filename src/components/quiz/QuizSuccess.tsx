@@ -55,6 +55,7 @@ export const QuizSuccess: React.FC<QuizSuccessProps> = ({ name, onClose }) => {
                         </div>
                         <p className="text-sm text-text-dark">Назначим бесплатный замер</p>
                     </div>
+
                 </div>
             </div>
 
