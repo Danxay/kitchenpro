@@ -51,11 +51,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuiz }) => {
                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform !text-[18px]">arrow_forward</span>
                 </button>
                 <a
-                  href="tel:+74951234567"
+                  href="tel:+74952483562"
                   className="border border-gray-200 hover:border-primary hover:bg-primary/5 text-text-dark h-12 sm:h-14 px-6 rounded-xl text-sm font-medium transition-all flex items-center justify-center gap-2"
                 >
                   <span className="material-symbols-outlined text-primary !text-[18px]">call</span>
-                  <span>+7 (495) 123-45-67</span>
+                  <span>+7 (495) 248-35-62</span>
                 </a>
               </div>
             </ScrollReveal>

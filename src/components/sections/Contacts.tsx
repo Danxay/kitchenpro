@@ -50,11 +50,11 @@ export const Contacts: React.FC<ContactsProps> = ({ onOpenQuiz }) => {
                                     <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform !text-[18px]">arrow_forward</span>
                                 </button>
                                 <a
-                                    href="tel:+74951234567"
+                                    href="tel:+74952483562"
                                     className="border border-white/30 hover:bg-white/10 hover:border-white/50 text-white h-14 px-8 rounded-xl text-base font-medium transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
                                 >
                                     <span className="material-symbols-outlined !text-[20px]">call</span>
-                                    <span>+7 (495) 123-45-67</span>
+                                    <span>+7 (495) 248-35-62</span>
                                 </a>
                             </div>
                         </ScrollReveal>
@@ -93,7 +93,7 @@ export const Contacts: React.FC<ContactsProps> = ({ onOpenQuiz }) => {
                                     </div>
                                     <div>
                                         <p className="font-bold mb-1 group-hover:text-primary transition-colors">Офис и шоурум</p>
-                                        <p className="text-gray-400 text-sm">г. Москва, ул. Мебельная, д. 15, стр. 2<br />Ежедневно: 10:00 – 20:00</p>
+                                        <p className="text-gray-400 text-sm">г. Москва, ул. Профсоюзная, д. 76, корп. 2<br />Ежедневно: 10:00 – 20:00</p>
                                     </div>
                                 </div>
 
@@ -103,7 +103,7 @@ export const Contacts: React.FC<ContactsProps> = ({ onOpenQuiz }) => {
                                     </div>
                                     <div>
                                         <p className="font-bold mb-1 group-hover:text-primary transition-colors">Телефон</p>
-                                        <a href="tel:+74951234567" className="text-gray-400 text-sm hover:text-primary transition-colors">+7 (495) 123-45-67</a>
+                                        <a href="tel:+74952483562" className="text-gray-400 text-sm hover:text-primary transition-colors">+7 (495) 248-35-62</a>
                                         <p className="text-gray-500 text-xs mt-1">Звоните, ответим на любые вопросы</p>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@ export const Contacts: React.FC<ContactsProps> = ({ onOpenQuiz }) => {
                                     <div>
                                         <p className="font-bold mb-2 group-hover:text-primary transition-colors">Мессенджеры</p>
                                         <div className="flex gap-2">
-                                            <a href="https://wa.me/74951234567" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary hover:text-text-dark hover:scale-110 flex items-center justify-center transition-all text-gray-400 text-sm font-bold">
+                                            <a href="https://wa.me/74952483562" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary hover:text-text-dark hover:scale-110 flex items-center justify-center transition-all text-gray-400 text-sm font-bold">
                                                 WA
                                             </a>
                                             <a href="https://t.me/kuhnipro" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary hover:text-text-dark hover:scale-110 flex items-center justify-center transition-all text-gray-400 text-sm font-bold">

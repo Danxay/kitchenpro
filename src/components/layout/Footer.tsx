@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://wa.me/74951234567"
+                href="https://wa.me/74952483562"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary hover:text-text-dark flex items-center justify-center text-gray-400 transition-all"
                 aria-label="WhatsApp"
               >
@@ -83,9 +83,9 @@ export const Footer: React.FC = () => {
             <h3 className="font-bold text-white mb-4">Контакты</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="tel:+74951234567" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2">
+                <a href="tel:+74952483562" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary !text-[16px]">call</span>
-                  +7 (495) 123-45-67
+                  +7 (495) 248-35-62
                 </a>
               </li>
               <li>
@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-start gap-2 text-gray-400">
                 <span className="material-symbols-outlined text-primary !text-[16px] mt-0.5">location_on</span>
-                <span>г. Москва, ул. Мебельная,<br />д. 15, стр. 2</span>
+                <span>г. Москва, ул. Профсоюзная,<br />д. 76, корп. 2</span>
               </li>
               <li className="flex items-center gap-2 text-gray-400">
                 <span className="material-symbols-outlined text-primary !text-[16px]">schedule</span>
@@ -135,7 +135,7 @@ export const Footer: React.FC = () => {
             <p>© {currentYear} КухниПро. Все права защищены.</p>
             <Link href="/privacy" className="hover:text-primary transition-colors">Политика конфиденциальности</Link>
           </div>
-          <p className="text-center">ИП Иванов И.И. ИНН 772512345678 ОГРНИП 318774600012345</p>
+          <p className="text-center">ИП Козлов М.А. ИНН 771826394512 ОГРНИП 320774600259381</p>
         </div>
       </div>
     </footer>

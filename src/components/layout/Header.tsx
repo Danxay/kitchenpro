@@ -42,9 +42,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuiz }) => {
             <Link href="/reviews" className="text-text-secondary hover:text-primary transition-colors font-medium text-sm">
               Отзывы
             </Link>
-            <a href="tel:+74951234567" className="text-text-dark font-bold text-sm hover:text-primary transition-colors flex items-center gap-1.5">
+            <a href="tel:+74952483562" className="text-text-dark font-bold text-sm hover:text-primary transition-colors flex items-center gap-1.5">
               <span className="material-symbols-outlined !text-[18px] text-primary">call</span>
-              +7 (495) 123-45-67
+              +7 (495) 248-35-62
             </a>
           </nav>
 
@@ -103,11 +103,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuiz }) => {
               Отзывы
             </Link>
             <a
-              href="tel:+74951234567"
+              href="tel:+74952483562"
               className="flex items-center gap-3 px-4 py-3 rounded-xl text-text-dark hover:bg-gray-50 transition-colors font-medium"
             >
               <span className="material-symbols-outlined text-primary !text-[20px]">call</span>
-              +7 (495) 123-45-67
+              +7 (495) 248-35-62
             </a>
             <div className="border-t border-gray-100 my-2" />
             <button

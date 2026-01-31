@@ -72,19 +72,19 @@ export default function RootLayout({
               "name": "КухниПро",
               "description": "Производство кухонь на заказ в Москве",
               "url": "https://kuhnipro.ru",
-              "telephone": "+7 (495) 123-45-67",
+              "telephone": "+7 (495) 248-35-62",
               "email": "info@kuhnipro.ru",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "ул. Мебельная, д. 15, стр. 2",
+                "streetAddress": "ул. Профсоюзная, д. 76, корп. 2",
                 "addressLocality": "Москва",
-                "postalCode": "123456",
+                "postalCode": "117393",
                 "addressCountry": "RU"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 55.7558,
-                "longitude": 37.6173
+                "latitude": 55.6471,
+                "longitude": 37.5237
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
